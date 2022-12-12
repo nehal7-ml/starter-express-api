@@ -7,7 +7,9 @@ Save the following server in example.js:
 */
 
 import { createServer, Socket } from 'net';
-
+import { config } from "dotenv";
+config();
+const port = process.env.PORT 
 var server = createServer(function(socket) {
 	socket.write('Echo server\r\n');
 	socket.pipe(socket);
@@ -19,7 +21,7 @@ var server = createServer(function(socket) {
 });
 
 try {
-    server.listen(1337, '127.0.0.1');
+    server.listen(port, 'https://www.calm-cyan-cocoon-toga.cyclic.app');
     
 } catch (error) {
     console.log(error);

@@ -1,7 +1,7 @@
 import {Socket }  from 'net';
 
 var client = new Socket();
-client.connect(1337, 'https://calm-cyan-cocoon-toga.cyclic.app', function() {
+client.connect(1337, 'https://www.calm-cyan-cocoon-toga.cyclic.app', function() {
 	console.log('Connected');
 	client.write('Hello, server! Love, Client.');
 });
